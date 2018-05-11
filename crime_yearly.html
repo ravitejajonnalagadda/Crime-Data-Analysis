@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="app" ng-controller="Yearly_Ctrl">
+<label style="font-family: Calibri;color: floralwhite"> <h3>Enter the year you want : </h3></label>
+<input class="input" title="year" ng-model = year>
+<div class="row">
+<div ng-repeat="x in yearCat | filter : year">
+    <h3 style="font-family: Calibri;color: floralwhite"> {{x}}-------> {{Yearly[$index]}}</h3>
+</div>
+<div id="donutchart" style="width: 900px; height: 500px;"></div>
+</div>
+</body>
+</html>

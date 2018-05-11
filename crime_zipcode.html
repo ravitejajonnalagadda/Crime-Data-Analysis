@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body data-ng-app="app" ng-controller="zipcodeCtrl">
+
+<form class="col-md-4">
+<div class="form-group">
+    <label style="font-family: Calibri;color: floralwhite">Enter Year</label>
+    <input id="year" ng-model="sw.year" type="number" class="form-control" title="year">
+</div>
+<button class="btn btn-primary" data-ng-click = "zipCode(sw)"> click to get results</button>
+    <h3 style="font-family: Calibri;color: red">{{zipCodeError}}</h3>
+    <table class="table table-striped text-center text-danger">
+        <thead class="text-center">
+            <tr>
+                <th class="text-center">ZipCode</th>
+                <th class="text-center">No. Of Records</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in zipCodeData">
+            <td>{{x.zip_code}}</td>
+            <td>{{x.count_report_no}}</td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<div class="col-md-8">
+    <div id="chart1_div" style="height: 500px;"></div>
+</div>
+
+</body>
+</html>
